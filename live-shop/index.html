@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="./app.js" defer></script>
+        <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+        <title>Maquette Live shop</title>
+        <style>
+            .sticky {
+                position: fixed;
+                top: 0;
+                width: 100%;
+                margin-top: 0;
+                box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+            }
+
+            .video {
+                aspect-ratio: 16/9;
+                height: auto;
+            }
+
+            .about-image {
+                height: calc(100vw - 2 * 0.5rem);
+            }
+
+            .picture-in-picture {
+                opacity: 1;
+                position: fixed;
+                bottom: 1rem;
+                right: 1rem;
+                width: clamp(250px, 60vw, 500px);
+                flex-direction: column-reverse;
+                justify-content: flex-start;
+            }
+
+            .picture-in-picture .chat>*:not(.send) {
+                display: none;
+            }
+
+            .picture-in-picture .send {
+                justify-self: flex-end;
+                background-color: white;
+                border-radius: 50px;
+                padding: .3rem;
+                box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.20);
+            }
+
+            .mt-108 {
+                margin-top: 27rem;
+            }
+
+            @media (min-width: 1024px) {
+                .lg\:h-150 {
+                    height: 35rem;
+                }
+            }
+
+            .chat {
+                min-width: 200px;
+            }
+
+            .about-container {
+                grid-template-areas:
+                    "main-img paragraph paragraph"
+                    "square-img testimonial testimonial";
+                grid-template-columns: 40% auto auto;
+            }
+
+            .about-container .about-image {
+                grid-area: main-img;
+                height: 30rem;
+            }
+        </style>
+    </head>
+
+    <body>
+        <!-- NAVBAR -->
+        <header id="navbar" class="bg-white z-50 mt-2">
+            <nav class="container mx-auto p-2 flex justify-between items-center relative">
+                <div class="bg-gray-300 h-10 w-24"></div>
+                <div class="bg-gray-200 h-8 w-8 lg:hidden"></div>
+                <div
+                    class="hidden absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 flex-row justify-center items-center gap-3 lg:flex">
+                    <div class="bg-gray-300 h-6 w-24"></div>
+                    <div class="bg-gray-300 h-6 w-20"></div>
+                    <div class="bg-gray-300 h-6 w-16"></div>
+                </div>
+            </nav>
+        </header>
+        <main class="px-4 mt-8">
+            <!-- HERO SECTION -->
+            <section class="relative">
+                <div class="flex justify-center items-center gap-3 lg:gap-6">
+                    <div class="bg-gray-200 w-28 h-40 lg:w-52 lg:h-80"></div>
+                    <div class="bg-gray-200 w-52 h-80 lg:h-150 lg:w-96"></div>
+                    <div class="bg-gray-200 w-28 h-40 lg:w-52 lg:h-80"></div>
+                </div>
+                <div
+                    class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-full h-full flex flex-col justify-center items-center gap-4">
+                    <div class="bg-gray-400 w-96 h-16 mx-auto"></div>
+                    <div class="bg-gray-300 w-56 h-10 mx-auto"></div>
+                </div>
+            </section>
+
+            <!-- LIVE -->
+            <section class="empty-live" style="height: 0;"></section>
+            <section id="live-chat" class="mt-16 flex flex-col lg:flex-row gap-4 transition-all duration-200 lg:px-8">
+                <div class="video bg-gray-300 w-full rounded shadow-lg max-w-4xl mx-auto lg:mx-0"></div>
+                <div class="chat flex w-full mx-auto flex-col gap-2 max-w-3xl justify-center lg:flex-grow">
+                    <div class="flex justify-start items-center gap-2">
+                        <div class="bg-gray-200 w-6 h-6 rounded-full"></div>
+                        <div class="bg-gray-100 h-4 w-4/5"></div>
+                    </div>
+                    <div class="flex justify-start items-center gap-2">
+                        <div class="bg-gray-200 w-6 h-6 rounded-full"></div>
+                        <div class="bg-gray-100 h-4 w-3/5"></div>
+                    </div>
+                    <div class="flex justify-start items-center gap-2">
+                        <div class="bg-gray-200 w-6 h-6 rounded-full"></div>
+                        <div class="bg-gray-100 h-4 w-11/12"></div>
+                    </div>
+                    <div class="flex justify-start items-center gap-2">
+                        <div class="bg-gray-200 w-6 h-6 rounded-full"></div>
+                        <div class="bg-gray-100 h-4 w-2/5"></div>
+                    </div>
+                    <div class="flex justify-start items-center gap-2">
+                        <div class="bg-gray-200 w-6 h-6 rounded-full"></div>
+                        <div class="bg-gray-100 h-4 w-full"></div>
+                    </div>
+                    <div class="flex justify-start items-center gap-2">
+                        <div class="bg-gray-200 w-6 h-6 rounded-full"></div>
+                        <div class="bg-gray-100 h-4 w-7/12"></div>
+                    </div>
+                    <hr>
+                    <div class="send w-full flex justify-between items-center">
+                        <div class="w-2/5 bg-gray-200 h-4 w-7/12"></div>
+                        <div class="w-7 h-7 rounded-full bg-gray-300"></div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- PRODUCTS -->
+            <section class="mt-16">
+                <div class="bg-gray-400 w-56 h-12 mx-auto"></div>
+                <div class="container mt-8 mx-auto">
+                    <ul
+                        class="products flex items-center justify-center flex-col gap-4 md:grid md:grid-flow-auto md:grid-cols-2 xl:grid-cols-3">
+                        <li class="bg-gray-200 h-72 w-72 md:w-full"></li>
+                        <li class="bg-gray-200 h-72 w-72 md:w-full"></li>
+                        <li class="bg-gray-200 h-72 w-72 md:w-full"></li>
+                        <li class="bg-gray-200 h-72 w-72 md:w-full"></li>
+                    </ul>
+                </div>
+                <div class="flex justify-center items-center mt-4 gap-2">
+                    <div class="w-5 h-5 bg-gray-200"></div>
+                    <div class="w-12 h-8 bg-gray-300"></div>
+                    <div class="w-5 h-5 bg-gray-200"></div>
+                </div>
+            </section>
+
+            <!-- ABOUT -->
+            <section class="mt-16">
+                <div class="bg-gray-400 w-64 h-12 mx-auto"></div>
+                <div class="about-container container mt-8 flex flex-col gap-4 mx-auto lg:grid">
+                    <div class="about-image bg-gray-200 w-full"></div>
+                    <div class="lg:self-center paragraph flex flex-col mt-8 mx-auto gap-2 lg:mt-0">
+                        <div class="bg-gray-300 w-64 h-8 mb-4"></div>
+                        <div class="bg-gray-200 w-56 h-4"></div>
+                        <div class="bg-gray-200 w-1/2 h-4"></div>
+                        <div class="bg-gray-200 w-2/3 h-4"></div>
+                        <div class="bg-gray-200 w-12 h-4"></div>
+                        <div class="bg-gray-200 w-4/5 h-4"></div>
+                        <div class="bg-gray-200 w-full h-4"></div>
+                    </div>
+                    <div class="lg:self-center paragraph flex flex-col mt-8 mx-auto gap-2 lg:mt-0">
+                        <div class="bg-gray-300 w-64 h-8 mb-4"></div>
+                        <div class="bg-gray-200 w-56 h-4"></div>
+                        <div class="bg-gray-200 w-1/2 h-4"></div>
+                        <div class="bg-gray-200 w-2/3 h-4"></div>
+                        <div class="bg-gray-200 w-12 h-4"></div>
+                        <div class="bg-gray-200 w-4/5 h-4"></div>
+                        <div class="bg-gray-200 w-full h-4"></div>
+                    </div>
+                    <div class="grid grid-flow-col grid-cols-2 grid-rows-2 gap-2 mx-auto w-4/5 lg:w-full mt-8">
+                        <div class="bg-gray-200 h-48"></div>
+                        <div class="bg-gray-200 h-48"></div>
+                        <div class="bg-gray-200 h-48"></div>
+                        <div class="bg-gray-200 h-48"></div>
+                    </div>
+                    <!-- TESTIMONIAL -->
+                    <div class="self-center col-span-2 flex justify-center gap-1 w-5/6 mx-auto mt-8 max-w-lg">
+                        <div class="h-16 w-12 bg-gray-100"></div>
+                        <div class="flex-grow flex flex-col gap-1 py-8">
+                            <div class="bg-gray-200 w-full h-4"></div>
+                            <div class="bg-gray-200 w-4/5 h-4"></div>
+                            <div class="bg-gray-200 w-2/3 h-4"></div>
+                            <div class="bg-gray-200 w-11/12 h-4"></div>
+                        </div>
+                        <div class="h-16 w-12 bg-gray-100 self-end"></div>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <!-- FOOTER -->
+        <footer class="mt-16 bg-gray-200 p-8">
+            <div class="container mx-auto">
+                <div class="flex flex-col justify-center items-center gap-3 md:flex-row">
+                    <div class="bg-gray-300 h-8 w-56"></div>
+                    <div class="bg-gray-300 h-8 w-24"></div>
+                </div>
+                <div class="flex justify-center items-center mt-6 gap-2">
+                    <div class="bg-gray-300 h-6 w-6"></div>
+                    <div class="bg-gray-300 h-6 w-6"></div>
+                </div>
+                <hr class="mt-6 border-gray-300 w-3/5 mx-auto">
+                <div class="flex flex-col lg:flex-row justify-center items-center mt-6 gap-3">
+                    <div class="bg-gray-300 h-6 w-56"></div>
+                    <div class="bg-gray-300 h-6 w-48"></div>
+                    <div class="bg-gray-300 h-6 w-56"></div>
+                </div>
+                <div class="bg-gray-300 h-8 w-64 mt-6 mx-auto"></div>
+            </div>
+        </footer>
+    </body>
+
+</html>
