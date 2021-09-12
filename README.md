@@ -3,15 +3,15 @@
 
 - 🔭 My portfolio [https://hsoulier.dev](https://hsoulier.dev)
 
-- In my works, **I love create animations (gsap my life)**
+- In my works, **I love create animations (gsap 👀)**
 
 - 🧪 My lab [https://lab.hsoulier.dev](https://lab.hsoulier.dev)
 
-- 🏫 Student **At Sorbonne University, Paris**
+- 🏫 Student at **ECV Digital, Paris**
 
 - 📫 How to reach me **hi.soulier@gmail.com**
 
-- 📄 Know about my experiences [https://hsoulier.dev/asset/cv-hippolyte-soulier.pdf](https://hsoulier.dev/asset/cv-hippolyte-soulier.pdf)
+- 📄 Know about my experiences [https://portfolio.hsoulier.dev/assets/cv.pdf](https://portfolio.hsoulier.dev/assets/cv.pdf)
 
 <h3 align="left">Connect with me:</h3>
 <p align="left">
