@@ -1,17 +1,17 @@
 <h1 align="center">Hello there 👋, I'm Hippolyte Soulier</h1>
 <h3 align="center">French front dev</h3>
 
-- 🔭 My portfolio [https://hsoulier.dev](https://hsoulier.dev)
+- 🔭 [My portfolio](https://hsoulier.dev)
 
 - In my works, **I love create animations (gsap 👀)**
 
-- 🧪 My lab [https://lab.hsoulier.dev](https://lab.hsoulier.dev)
+- 🧪 [My lab](https://lab.hsoulier.dev)
 
 - 🏫 Student at **ECV Digital, Paris**
 
 - 📫 How to reach me **hi.soulier@gmail.com**
 
-- 📄 Know about my experiences [https://portfolio.hsoulier.dev/assets/cv.pdf](https://portfolio.hsoulier.dev/assets/cv.pdf)
+- 📄 Know about my experiences [(CV)](https://portfolio.hsoulier.dev/assets/cv-2022.pdf)
 
 <h3 align="left">Connect with me:</h3>
 <p align="left">
