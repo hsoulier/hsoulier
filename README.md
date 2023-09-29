@@ -56,3 +56,9 @@
 <img src="https://raw.githubusercontent.com/hsoulier/hsoulier/output/snake.svg" alt="Snake animation" />
 
 ###
+
+
+### This week I spent time on ⏲️ ...
+
+<!--START_SECTION:waka-->
+<!--END_SECTION:waka-->
