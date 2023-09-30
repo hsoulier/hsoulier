@@ -61,4 +61,12 @@
 ### This week I spent time on ⏲️ ...
 
 <!--START_SECTION:waka-->
+
+```txt
+Total Time: 59 mins
+
+TypeScript   54 mins         ⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣷⣀⣀   91.53 %
+JavaScript   5 mins          ⣿⣿⣄⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀   08.47 %
+```
+
 <!--END_SECTION:waka-->
