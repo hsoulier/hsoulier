@@ -1,5 +1,6 @@
 # Hello there 👋
 
+▲ French minimalist dev.
 
 ### 🔭 Currently
 
